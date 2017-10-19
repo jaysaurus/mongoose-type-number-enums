@@ -1,0 +1,7 @@
+{
+  "error": "Failed to add Integer Enum type to mongoose: {0}",
+  "badMongoose": "mongoose object is invalid, got: {0}",
+  "notANumber": "\"{0}\" is not a number",
+  "notArray": "Enum type requires an enum array",
+  "notFound": "Enum value was not found"
+}
