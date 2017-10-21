@@ -22,4 +22,7 @@
   "devDependencies": {
     "jest": "^21.2.1"
   },
+  "publishConfig": {
+    "access": "public"
+  }
 }
