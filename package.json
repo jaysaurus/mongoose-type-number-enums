@@ -4,7 +4,10 @@
   "description": "Allows mongoose to support enums as values of type 'number' rather than 'string'. Builds in a helpful tool for managing numeric enums via arrays.  IOW. make enums look and feel a whole lot more like they should!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true
   },
   "keywords": [
     "mongoose",
@@ -15,5 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "echo-handler": "^1.3.3"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
   }
 }
