@@ -1,6 +1,6 @@
 {
   "name": "mongoose-type-number-enums",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Allows mongoose to support enums as values of type 'number' rather than 'string'. Builds in a helpful tool for managing numeric enums via arrays.  IOW. make enums look and feel a whole lot more like they should!",
   "main": "index.js",
   "scripts": {
