@@ -1,5 +1,4 @@
 const echoHandler = require('echo-handler');
-const EnumHandler = require('./lib/EnumHandler');
 const getCast = require('./lib/getCast');
 
 module.exports = function MongooseTypeNumberEnums (i18n = 'en') {
@@ -26,9 +25,5 @@ module.exports = function MongooseTypeNumberEnums (i18n = 'en') {
     } catch (e) {
       echo.throw('error', e.message);
     }
-  };
-
-  this.mapEnumMethods = enumsObject => {
-    return new EnumHandler(echo).mapEnumMethods(enumsObject);
   };
 };
