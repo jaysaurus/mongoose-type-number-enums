@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jaysaurus/mongoose-type-number-enums.svg?branch=master)](https://travis-ci.org/jaysaurus/mongoose-type-number-enums)
+
 # mongoose-type-number-enums
 Adds support for mongoose to work with enums whose value type is 'number'.  Added as vanilla mongoose only allows for persisting string-based enums.
 
