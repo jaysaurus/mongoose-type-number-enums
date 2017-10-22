@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/jaysaurus/mongoose-type-number-enums.svg?branch=master)](https://travis-ci.org/jaysaurus/mongoose-type-number-enums)
 
 # mongoose-type-number-enums
-Adds support for mongoose to work with enums whose value type is 'number'.  Added as vanilla mongoose only allows for persisting string-based enums.
+Adds support for mongoose to use enums that persist to mongoDB as numbers rather than strings.
 
 ## Installation
 You can install mongoose-type-number-enums via npm.
@@ -35,7 +35,7 @@ Below is a contrived example. It is advised that you store your enum arrays some
 ```javascript
 this.createFoo = async () => {
   try {
-    let enumArr = ['VEX', 'GROG', 'PIKE']; 
+    let enumArr = ['VEX', 'GROG', 'PIKE'];
     await new VoxMachinaMember({ memberName: enumArr.indexOf('VEX') }).save();
     await new VoxMachinaMember({ memberName: enumArr.indexOf('GROG') }).save();
     await new VoxMachinaMember({ memberName: enumArr.indexOf('PIKE') }).save();
@@ -44,7 +44,7 @@ this.createFoo = async () => {
   }
 };
 ```
-Given the above instance, your mongo database would store: 0, 1 and 2 respectively in each document's 'memberName' field. 
+Given the above instance, your mongo database would store: 0, 1 and 2 respectively in each document's 'memberName' field.
 
 #### Default Configuration
 when instantiating MongooseTypeNumberEnums, it can be supplied a two letter i18n code.  The hope, in the long run, is that this build will support other languages than English when generating messages.  Presently, the module only supports English.  PLEASE FORK AND ADD INTERNATIONAL MESSAGES!
