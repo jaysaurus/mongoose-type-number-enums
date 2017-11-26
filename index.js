@@ -2,10 +2,20 @@ const echoHandler = require('echo-handler');
 const getCast = require('./lib/getCast');
 
 module.exports = function MongooseTypeNumberEnums (i18n = 'en') {
+  let language = 'en';
+  if (i18n !== 'en') {
+    const supportedLanguages = ['en'];
+    for (let i in supportedLanguages) {
+      if (i18n === supportedLanguages[i]) {
+        language = i18n;
+        break;
+      }
+    }
+  }
   const echo =
     echoHandler
-      .configure({ i18n, messageFolder: `${__dirname}/lib/i18n` })
-      .load('messages', i18n);
+      .configure({ language, messageFolder: `${__dirname}/lib/i18n` })
+      .load('messages', language);
 
   function getNewType (mongoose) {
     return function newType (key, options) {
